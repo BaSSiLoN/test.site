@@ -1,0 +1,39 @@
+html, body, h1, h2, h3, h4, div, p {
+    margin: 0;
+    padding: 0;
+}
+header {
+    padding: 35px 75px 25px;
+    background-color: #ccc;
+    margin: 0 0 20px 0;
+}
+li {
+    display: inline-block;
+}
+a {
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    margin: 0 10px 0 0;
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+.active {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+.item {
+    clear: both;
+    height: 160px;
+}
+.item img {
+    width: 200px;
+    float: left;
+    padding: 0 30px 0 0;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 100px 75px;
+}
