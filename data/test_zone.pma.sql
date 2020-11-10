@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Ноя 03 2020 г., 14:58
+-- Время создания: Ноя 10 2020 г., 17:01
 -- Версия сервера: 10.3.16-MariaDB
 -- Версия PHP: 7.3.6
 
@@ -68,6 +68,27 @@ INSERT INTO `contact` (`id`, `block_name`, `header`, `content`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `element`
+--
+
+CREATE TABLE `element` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(250) NOT NULL,
+  `header` varchar(255) DEFAULT NULL,
+  `content` mediumtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `element`
+--
+
+INSERT INTO `element` (`id`, `name`, `header`, `content`) VALUES
+(1, 'footer_left', 'Footer Left', '    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolores blanditiis voluptatem accusantium? Corrupti delectus excepturi vitae. Esse, eligendi doloribus, quibusdam totam neque expedita quod harum eos, illo dolor quam?</p>\r\n    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolores blanditiis voluptatem accusantium? Corrupti delectus excepturi vitae. Esse, eligendi doloribus, quibusdam totam neque expedita quod harum eos, illo dolor quam?</p>'),
+(2, 'footer_right', 'Footer Right', '    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolores blanditiis voluptatem accusantium? Corrupti delectus excepturi vitae. Esse, eligendi doloribus, quibusdam totam neque expedita quod harum eos, illo dolor quam?</p>\r\n    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolores blanditiis voluptatem accusantium? Corrupti delectus excepturi vitae. Esse, eligendi doloribus, quibusdam totam neque expedita quod harum eos, illo dolor quam?</p>');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `main`
 --
 
@@ -82,7 +103,7 @@ CREATE TABLE `main` (
 --
 
 INSERT INTO `main` (`id`, `header`, `content`) VALUES
-(1, 'amet consectetur adipisicing', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quod maiores ratione autem, explicabo magnam deleniti! Reiciendis officia, nulla commodi possimus odio rem officiis harum, natus ducimus dolore, aperiam cum!</p>\n    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quod maiores ratione autem, explicabo magnam deleniti! Reiciendis officia, nulla commodi possimus odio rem officiis harum, natus ducimus dolore, aperiam cum!</p>\n    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quod maiores ratione autem, explicabo magnam deleniti! Reiciendis officia, nulla commodi possimus odio rem officiis harum, natus ducimus dolore, aperiam cum!</p>');
+(1, 'asd rshsdth tyjutydrh df', '<p>asd rshsdth tyjutydrh df asd rshsdth tyjutydrh df asd rshsdth tyjutydrh df</p>\r\n<p>asd rshsdth tyjutydrh df asd rshsdth tyjutydrh df asd rshsdth tyjutydrh df</p>\r\n<p>asd rshsdth tyjutydrh df asd rshsdth tyjutydrh df asd rshsdth tyjutydrh df</p>');
 
 -- --------------------------------------------------------
 
@@ -153,6 +174,13 @@ ALTER TABLE `contact`
   ADD UNIQUE KEY `id_UNIQUE` (`id`);
 
 --
+-- Индексы таблицы `element`
+--
+ALTER TABLE `element`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id_UNIQUE` (`id`);
+
+--
 -- Индексы таблицы `main`
 --
 ALTER TABLE `main`
@@ -189,6 +217,12 @@ ALTER TABLE `about`
 -- AUTO_INCREMENT для таблицы `contact`
 --
 ALTER TABLE `contact`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT для таблицы `element`
+--
+ALTER TABLE `element`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
